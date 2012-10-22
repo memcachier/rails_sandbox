@@ -5,6 +5,7 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'dalli', '>=2.3.0'
 gem 'memcachier'
+gem 'redcarpet'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
