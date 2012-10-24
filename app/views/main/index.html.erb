@@ -1,1 +1,16 @@
-<%= markdown @readme %>
+<p>Congratulations, you've deployed your own version of the Memcache test app to Heroku.</p>
+
+<p>Your app's name is <b><%= request.subdomain %></b>. You will need this name when connecting to Heroku.</p>
+
+<p>To establish a shell for interacting with Memcache run the following from the command line or terminal:</p>
+
+<code><pre>
+$ heroku run console -a <%= request.subdomain %>
+irb> cache = Dalli::Client.new
+irb> cache.set("foo", "bar")
+=> true
+irb> cache.get("foo")
+=> "bar"
+</pre></code>
+
+Please refer back to the <a href="https://devcenter.heroku.com/articles/advanced-memcache#interactive-shell">Getting the Most Out of Memcache</a> article to learn about more advanced Memcache usage.
