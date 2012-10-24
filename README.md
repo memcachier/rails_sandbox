@@ -1,21 +1,14 @@
-This is a Ruby on Rails app meant to be used in a sandbox environment for experimenting with Memcache in Heroku.
+This is a Ruby on Rails app meant to be used in a sandbox environment for experimenting with Memcache on Heroku.
 
-Run the following commands to setup the environment in Heroku:
+[Click here](https://api.heroku.com/myapps/memcache-rails-sandbox/clone) to automatically deploy a copy of this app to your [Heroku account](https://api.heroku.com/signup/devcenter-advanced-memcache)
 
-    $ git clone https://github.com/memcachier/rails_sandbox.git
-    $ cd rails_sandbox/
-    $ heroku apps:create --addons memcachier
-    $ git push heroku master
+Once the app is provisioned, establish a Memcache console from the command line. Your Heroku app name is the subdomain of your deployed app. So if your app was deployed to "http://serene-mesa-2821.herokuapp.com/" then its app name is "serene-mesa-2821"
 
-Next, run `$ heroku open` to verify the app is running.  This README file is listed on the index page.  Finally, run the Heroku console and use memcache:
-
-    $ heroku run console
-    irb> require 'dalli'
-    irb> require 'memcachier'
+    $ heroku run console -a app-name
     irb> cache = Dalli::Client.new
     irb> cache.set("foo", "bar")
     => true
     irb> cache.get("foo")
     => "bar"
 
-Refer to the [advanced memcache operations guide](https://devcenter.heroku.com/articles/advanced-memcache) for advanced memcache usage.
+Refer to the [Getting the Most Out of Memcache](https://devcenter.heroku.com/articles/advanced-memcache#interactive-shell) article for advanced memcache usage.
