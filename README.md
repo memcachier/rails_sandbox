@@ -37,7 +37,7 @@ Please report bugs via the
 
 Master [git repository](http://github.com/memcachier/rails_sandbox):
 
-* `git clone git://github.com/memcachier/examples-django.git`
+* `git clone git://github.com/memcachier/rails_sandbox.git`
 
 ## Licensing
 

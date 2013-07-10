@@ -1,14 +1,29 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.5'
+gem 'rails', '~> 3.2.13'
 gem 'jquery-rails'
-gem 'pg'
-gem 'dalli', '>=2.3.0'
-gem 'memcachier'
-gem 'redcarpet'
+
+# for POW
+group :development do
+  gem 'sqlite3'
+end
+
+# for Heroku, even though we never use the DB.
+group :production do
+  gem 'pg'
+end
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
+
+# ==========
+# MemCachier
+# ==========
+# We recommend kgio for better performance.
+gem 'kgio'
+gem 'memcachier'
+gem 'dalli'
+
