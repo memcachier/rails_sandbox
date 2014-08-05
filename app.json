@@ -1,0 +1,8 @@
+{
+  "name": "MemCachier Rails Sandbox",
+  "description": "Ruby-on-Rails app illustrating how to use MemCachier",
+  "repository": "https://github.com/memcachier/rails_sandbox",
+  "logo": "https://www.memcachier.com/assets/logo-large.png",
+  "keywords": ["ruby", "rails", "memcache", "memcachier", "caching" ],
+  "addons": [ "memcachier" ]
+}

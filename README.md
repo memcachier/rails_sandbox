@@ -27,6 +27,12 @@ Refer to the [Getting the Most Out of
 Memcache](https://devcenter.heroku.com/articles/advanced-memcache#interactive-shell)
 article for advanced memcache usage.
 
+## Deploy to Heroku
+
+You can deploy this app yourself to Heroku to play with.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 ## Get involved!
 
 We are happy to receive bug reports, fixes, documentation
