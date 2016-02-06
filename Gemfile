@@ -11,6 +11,7 @@ end
 
 # for Heroku, even though we never use the DB.
 group :production do
+  gem 'rails_12factor'
   gem 'pg'
 end
 
